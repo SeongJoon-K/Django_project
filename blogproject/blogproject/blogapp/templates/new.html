@@ -1,0 +1,15 @@
+<form action="{% url 'create' %}" method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="title">제목</label>
+        <input type="text" name="title" id="title">
+    </div>
+    <br>
+    <div>
+        <label for='body'>본문</label>
+        <textarea name="body" id="body" cols="30" rows="10"></textarea>
+    </div>
+    <input type="submit" value="글 생성하기">
+<!-- 갖다줘 라는 요청은 GET -->
+<!-- 처리해줘 요청은 POST -->
+</form>
